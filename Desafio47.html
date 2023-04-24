@@ -1,0 +1,442 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<!-- Define o título da página como "Ranqueamento de Equipes" -->
+	<title>Ranqueamento de Equipes</title>
+	
+	<style>
+    h1{
+      color: #388E3C; /* Define a cor do h1 "Ranqueamento de Equipes" como verde*/
+    }
+		/* Define o estilo para a tabela */
+		table {
+			font-family: Arial, sans-serif; /* Define a fonte do texto da tabela */
+			border-collapse: collapse; /* Define a tabela sem bordas */
+			width: 100%; /* Define a largura da tabela como 100% da largura da página */
+		}
+		
+		/* Define o estilo para as células da tabela */
+		td, th {
+			border: 1px solid #ddd; /* Define uma borda de 1px e cor cinza claro */
+			text-align: center; /* Define o alinhamento do texto como centralizado */
+			padding: 8px; /* Define um espaçamento interno de 8px para as células */
+		}
+		
+		/* Define o estilo para as linhas pares da tabela */
+		tr:nth-child(even) {
+			background-color: #f2f2f2; /* Define uma cor de fundo cinza claro */
+		}
+		
+		/* Define o estilo para o cabeçalho da tabela */
+		th {
+			background-color: #4CAF50; /* Define uma cor de fundo verde escuro */
+			color: white; /* Define a cor do texto como branco */
+		}
+		
+		/* Define o estilo para as imagens */
+		img {
+			max-width: 50px; /* Define a largura máxima de 50 pixels para as imagens */
+			max-height: 50px; /* Define a altura máxima de 50 pixels para as imagens */
+		}
+
+    #search {
+  padding: 8px; /* Adiciona um espaçamento interno de 8px */
+  border: 2px solid #ccc; /* Adiciona uma borda de 2px e cor cinza claro */
+  border-radius: 4px; /* Adiciona um raio de borda de 4px para dar um efeito arredondado */
+  box-sizing: border-box; /* Define a caixa como a borda da caixa, incluindo preenchimento e bordas, para que a largura total da barra de pesquisa não ultrapasse 100% da largura da página */
+  width: 100%; /* Define a largura da barra de pesquisa como 100% da largura da página */
+  margin-bottom: 10px; /* Adiciona uma margem inferior de 10px para separar a barra de pesquisa da tabela */
+}
+
+	</style>
+</head>
+<body>
+	<!-- Cabeçalho da página -->
+	<h1>Ranqueamento de Equipes</h1>
+<!-- Cria um campo de entrada de texto para pesquisa das Equipes com um ID "search"  -->
+ <!-- Adiciona um evento de entrada "oninput" que chama a função "TableSearch()" quando o usuário digita algo no campo de entrada -->
+  <input type="text" id="search" placeholder="Pesquisar..." oninput="TableSearch()">
+  <br>
+	<!-- Tabela com os dados das equipes -->
+	<table>
+		<!-- Cabeçalho da tabela -->
+		<thead>
+			<!-- Linha com os nomes das colunas -->
+			<tr>
+				<th>Posição</th>
+				<th>Logotipo</th>
+				<th>Equipe</th>
+				<th>Turma</th>
+				<th>Pontuação</th>
+				<th>Nota no Boletim</th>
+			</tr>
+		</thead>
+		<!-- Corpo da tabela -->
+		<tbody>
+			<!-- Linha com os dados da equipe 1 -->
+			<tr>
+				<!-- Coluna com a posição da equipe -->
+				<td>1</td>
+				<!-- Coluna com o logotipo da equipe -->
+				<td><img src="Vikings.png" alt="Logo Equipe 1"></td>
+				<!-- Coluna com o nome da equipe -->
+				<td>Vikings</td>
+				<!-- Coluna com a turma da equipe -->
+				<td>3° A</td>
+				<!-- Coluna com a pontuação da equipe -->
+				<td>19</td>
+				<!-- Coluna com a nota no boletim da equipe -->
+				<td>4</td>
+			</tr> 
+			<!-- As outras linhas da tabela seguem a mesma estrutura da primeira linha -->
+			<tr>
+				<td>1</td>
+				<td><img src="ThreeCoders.png" alt="Logo Equipe 2"></td>
+				<td>ThreeCoders</td>
+				<td>3° A</td>
+				<td>19</td>
+				<td>4</td>
+			</tr>
+			<tr>
+				<td>2</td>
+				<td><img src="NetForce.png" alt="Logo Equipe 3"></td>
+				<td>NetForce</td>
+				<td>TADS</td>
+				<td>13</td>
+				<td>2.7</td>
+			</tr>
+			<tr>
+				<td>2</td>
+				<td><img src="Lovelace.png" alt="Logo Equipe 4"></td>
+				<td>Lovelace</td>
+				<td>TADS</td>
+				<td>13</td>
+				<td>2.7</td>
+			</tr>
+			<tr>
+				<td>3</td>
+				<td><img src="the_makers.png" alt="Logo Equipe 5"></td>
+				<td>The Makers</td>
+				<td>3° B</td>
+				<td>12.5</td>
+				<td>2.6</td>
+			</tr>
+      <tr>
+				<td>4</td>
+				<td><img src="RESISTECH.jpg" alt="Logo Equipe 6"></td>
+				<td>RESISTECH</td>
+				<td>TADS</td>
+				<td>12</td>
+				<td>2.5</td>
+			</tr>
+      <tr>
+				<td>5</td>
+				<td><img src="flasco.png" alt="Logo Equipe 7"></td>
+				<td>Flasco</td>
+				<td>3° B</td>
+				<td>11</td>
+				<td>2.3</td>
+			</tr>
+      <tr>
+				<td>6</td>
+				<td><img src="Orcaca.png" alt="Logo Equipe 8"></td>
+				<td>Orcaca</td>
+				<td>TADS</td>
+				<td>10</td>
+				<td>2.1</td>
+			</tr>
+      <tr>
+				<td>6</td>
+				<td><img src="SLR.png" alt="Logo Equipe 9"></td>
+				<td>SLR</td>
+				<td>TADS</td>
+				<td>10</td>
+				<td>2.1</td>
+			</tr>
+      <tr>
+				<td>6</td>
+				<td><img src="Autarquia.png" alt="Logo Equipe 10"></td>
+				<td>Autarquia</td>
+				<td>3° A</td>
+				<td>10</td>
+				<td>2.1</td>
+			</tr>
+      
+      <tr>
+				<td>8</td>
+				<td><img src="Elektras.png" alt="Logo Equipe 11"></td>
+				<td>Elektras</td>
+				<td>3° A</td>
+				<td>7</td>
+				<td>1.4</td>
+			</tr>
+
+      <tr>
+				<td>8</td>
+				<td><img src="alfa.png" alt="Logo Equipe 12"></td>
+				<td>Alfa</td>
+				<td>3° A</td>
+				<td>7</td>
+				<td>1.4</td>
+			</tr>
+
+      <tr>
+				<td>9</td>
+				<td><img src="Fenix.png" alt="Logo Equipe 13"></td>
+				<td>Fenix</td>
+				<td>3° B</td>
+				<td>6</td>
+				<td>1.2</td>
+			</tr>
+      
+<tr>
+				<td>9</td>
+				<td><img src="pastel_de_flango.png" alt="Logo Equipe 14"></td>
+				<td>Pastel de Flango</td>
+				<td>3° A</td>
+				<td>6</td>
+				<td>1.6</td>
+			</tr>
+
+<tr>
+				<td>10</td>
+				<td><img src="ABY.png" alt="Logo Equipe 15"></td>
+				<td>ABY</td>
+				<td>3° A</td>
+				<td>5</td>
+				<td>1</td>
+			</tr>
+
+<tr>
+				<td>10</td>
+				<td><img src="Cyber_Warriors.png" alt="Logo Equipe 16"></td>
+				<td>Cyber Warriors</td>
+				<td>TADS</td>
+				<td>5</td>
+				<td>1</td>
+			</tr>
+
+    <tr>
+				<td>11</td>
+				<td><img src="FIX.jpg" alt="Logo Equipe 17"></td>
+				<td>Fix</td>
+				<td>3° B</td>
+				<td>3</td>
+				<td>0.63</td>
+			</tr>  
+
+       <tr>
+				<td>11</td>
+				<td><img src="Dark.png" alt="Logo Equipe 18"></td>
+				<td>Dark</td>
+				<td>TADS</td>
+				<td>3</td>
+				<td>0.63</td>
+			</tr>  
+
+<tr>
+				<td>11</td>
+				<td><img src="mosqueteiras.png" alt="Logo Equipe 19"></td>
+				<td>As Três Mosqueteiras</td>
+				<td>3° A</td>
+				<td>3</td>
+				<td>0.63</td>
+			</tr> 
+
+      <tr>
+<td>11</td>
+				<td><img src="Phytomancers.png" alt="Logo Equipe 20"></td>
+				<td>Phytomancers</td>
+				<td>TADS</td>
+				<td>3</td>
+				<td>0.63</td>
+			</tr> 
+
+        <tr>
+<td>12</td>
+				<td><img src="sayajins.png" alt="Logo Equipe 21"></td>
+				<td>Sayajins</td>
+				<td>TADS</td>
+				<td>2</td>
+				<td>0.42</td>
+			</tr> 
+
+          <tr>
+<td>12</td>
+				<td><img src="Medusas.png" alt="Logo Equipe 22"></td>
+				<td>Medusas</td>
+				<td>3° B</td>
+				<td>2</td>
+				<td>0.42</td>
+			</tr> 
+
+<td>13</td>
+				<td><img src="Valkyrie.png" alt="Logo Equipe 23"></td>
+				<td>Valkyrie</td>
+				<td>3° A</td>
+				<td>1</td>
+				<td>0.21</td>
+			</tr> 
+
+    <tr>
+<td>13</td>
+				<td><img src="as_negrinhas.jpg" alt="Logo Equipe 24"></td>
+				<td>As Negrinhas</td>
+				<td>3° B</td>
+				<td>1</td>
+				<td>0.21</td>
+			</tr> 
+
+    <tr>
+<td>13</td>
+				<td><img src="Filhos_de_Odin.png" alt="Logo Equipe 25"></td>
+				<td>Filhos de Odin</td>
+				<td>3° B</td>
+				<td>1</td>
+				<td>0.21</td>
+			</tr> 
+
+    <tr>
+<td>13</td>
+				<td><img src="Elite_Ateniana.png" alt="Logo Equipe 26"></td>
+				<td>Elite Ateniana</td>
+				<td>3° B</td>
+				<td>1</td>
+				<td>0.21</td>
+			</tr> 
+
+    <tr>
+<td>13</td>
+				<td><img src="olhos_do_futuro.png" alt="Logo Equipe 27"></td>
+				<td>Olhos do Futuro</td>
+				<td>3° B</td>
+				<td>1</td>
+				<td>0.21</td>
+			</tr> 
+    
+    <tr>
+<td>13</td>
+				<td><img src="Coded_Ladies.png" alt="Logo Equipe 28"></td>
+				<td>Coded Ladies</td>
+				<td>3° A</td>
+				<td>1</td>
+				<td>0.21</td>
+			</tr> 
+
+<tr>
+<td>13</td>
+				<td><img src="Pro-Dog-IA.png" alt="Logo Equipe 29"></td>
+				<td>Pro Dog IA</td>
+				<td>TADS</td>
+				<td>1</td>
+				<td>0.21</td>
+			</tr> 
+
+<tr>
+<td>13</td>
+				<td><img src="InfoEletric.png" alt="Logo Equipe 30"></td>
+				<td>InfoEletric</td>
+				<td>TADS</td>
+				<td>1</td>
+				<td>0.21</td>
+			</tr> 
+
+    <tr>
+<td>13</td>
+				<td><img src="GODDESSES.png" alt="Logo Equipe 31"></td>
+				<td>GODDESSES OF CODING</td>
+				<td>3° A</td>
+				<td>1</td>
+				<td>0.21</td>
+			</tr> 
+
+ <tr>
+<td>13</td>
+				<td><img src="alfa_tech.png" alt="Logo Equipe 32"></td>
+				<td>Alfa Tech</td>
+				<td>3° B</td>
+				<td>1</td>
+				<td>0.21</td>
+			</tr> 
+    
+		</tbody>
+	</table>
+</body>
+  <script>
+    function TableSearch() {
+    const search = document.querySelector('#search'); // Seleciona o elemento de entrada da pesquisa de equipes
+      
+  const tableRows = document.querySelectorAll('tbody tr'); // Seleciona todas as linhas da tabela
+      
+  // Define um ouvinte de evento input na entrada de pesquisa
+  search.addEventListener('input', () => {
+    const searchValue = search.value.trim().toLowerCase(); // Obtém o valor de pesquisa do usuário
+
+    // Se a pesquisa não estiver vazia
+    if (searchValue !== '') {
+      // Itera sobre as linhas da tabela
+      tableRows.forEach(row => {
+        const teamName = row.querySelector('td:nth-child(3)').textContent.trim().toLowerCase(); // Obtém o nome da equipe da linha
+        const isMatch = teamName.startsWith(searchValue); // Verifica se o nome da equipe começa com o valor de pesquisa
+
+        // Se o nome da equipe corresponder à pesquisa, exibe a linha, caso contrário, oculta-a
+        row.style.display = isMatch ? '' : 'none';
+      });
+    } else {
+      // Se a pesquisa estiver vazia, exibe todas as linhas da tabela
+      tableRows.forEach(row => row.style.display = '');
+    }
+  });
+    }
+    
+  // Obter o elemento da tabela
+  const table = document.querySelector("table");
+  // Obter o elemento do corpo da tabela
+  const tableBody = table.querySelector("tbody");
+  // Obter o elemento do cabeçalho da tabela
+  const tableHeader = table.querySelector("thead");
+
+  // Criar uma função para comparar valores com base na coluna clicada
+  function compare(column, ascending) {
+    // Retorna uma função de comparação
+    return function(a, b) {
+      // Obter os valores da célula da linha atual para a coluna atual
+      const cellA = a.cells[column].textContent;
+      const cellB = b.cells[column].textContent;
+      
+      // Analisar os valores da célula como números, se aplicável
+      const valueA = isNaN(cellA) ? cellA : parseFloat(cellA);
+      const valueB = isNaN(cellB) ? cellB : parseFloat(cellB);
+      
+      // Comparar os valores da célula
+      const comparison = valueA > valueB ? 1 : valueA < valueB ? -1 : 0;
+      
+      // Inverter a comparação se estiver classificando em ordem decrescente
+      return ascending ? comparison : -comparison;
+    }
+  }
+
+  // Adicionar ouvintes de eventos às células do cabeçalho da tabela para ordenar a tabela
+  for (let i = 0; i < tableHeader.rows[0].cells.length; i++) {
+    tableHeader.rows[0].cells[i].addEventListener("click", function() {
+      // Determinar a ordem de classificação e a coluna atual
+      const ascending = this.getAttribute("data-order") === "asc";
+      const column = this.cellIndex;
+      
+      // Ordenar as linhas da tabela
+      const sortedRows = Array.from(tableBody.rows).sort(compare(column, ascending));
+      
+      // Remover as linhas da tabela existentes
+      while (tableBody.firstChild) {
+        tableBody.removeChild(tableBody.firstChild);
+      }
+      
+      // Adicionar as linhas classificadas ao corpo da tabela
+      tableBody.append(...sortedRows);
+      
+      // Alternar a ordem de classificação
+      this.setAttribute("data-order", ascending ? "desc" : "asc");
+    });
+  }
+</script>
+</html>
